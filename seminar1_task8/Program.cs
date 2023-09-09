@@ -2,12 +2,12 @@
 
 Console.Write ("Введите число: ");
 int numb = int.Parse(Console.ReadLine()??"0"); //Получаем число и записываем его в переменную
-int count = 2;
+int count = 2; //отсчёт с двойки, так как 1 не чётная
 
 while (count<numb)
 {
-    Console.Write (count%2==0 ? count:", ");
+    Console.Write (count%2==0 ? count:", ");//проверяем чётное ли число
     count ++; //счётчик
 }
-Console.Write (numb%2==0 ? numb:"");
+Console.Write (numb%2==0 ? numb:""); //проверяем на чётность наше введёное число и если оно чётное, добавляем к результату
 
