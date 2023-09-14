@@ -18,7 +18,7 @@ int GetQuarter(int x, int y) //метод для нахождения четве
     else return 4;
 }
 
-void Print_Result (string msg)
+void Print_Result (string msg) //метод для выводы результата
 {
     Console.WriteLine(msg);
 }
@@ -28,7 +28,7 @@ void Print_Result (string msg)
 int x = Read_Data("Введите координату точки X:");//Получаем первое число и записываем его в переменную Х
 int y = Read_Data("Введите координату точки Y:");//Получаем второе число и записываем его в переменную У
 
-int result = GetQuarter(x,y);
+int result = GetQuarter(x,y); //определяем четверть
 
-Print_Result ("Точка находится в "+result+" четверти плоскости");
+Print_Result ("Точка находится в "+result+" четверти плоскости"); //выводи результат т.е. номер четверти
 

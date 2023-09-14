@@ -3,41 +3,28 @@
 // диапазон возможных координат точек в этой 
 // четверти (x и y).
 
-Console.WriteLine("Введите номер четверти где находится точка:");
-int quarter = Convert.ToInt32(Console.ReadLine()??"0");
-int xMin, xMax, yMin, yMax;
 
-switch (quarter)
-    {
-        case 1:
-                xMin = 0;
-                xMax = int.MaxValue;
-                yMin = 0;
-                yMax = int.MaxValue;
-                break;
-        case 2:
-                xMin = int.MinValue;
-                xMax = 0;
-                yMin = 0;
-                yMax = int.MaxValue;
-                break;
-        case 3:
-                xMin = int.MinValue;
-                xMax = 0;
-                yMin = int.MinValue;
-                yMax = 0;
-                break;
-        case 4:
-                xMin = 0;
-                xMax = int.MaxValue;
-                yMin = int.MinValue;
-                yMax = 0;
-                break;
-        default:
-                Console.WriteLine("Неверный номер четверти");
-                return;
-    }
+int Read_Quarter (string start) //метод для получения номера четверти
+{
+    Console.WriteLine(start);
+    int quarter = int.Parse(Console.ReadLine()??"0"); 
+    return quarter;
+}
 
-Console.WriteLine($"Диапазон координат точек в четверти {quarter}:");
-Console.WriteLine($"x: от {xMin} до {xMax}");
-Console.WriteLine($"y: от {yMin} до {yMax}");
+
+string Data_Ind (int quarter) //метод для определения возможный дапозон координат
+{
+        switch (quarter) 
+        {
+        case 1: return "Возможные координаты точек в четверти 1: (X > 0 ; Y > 0)";
+        case 2: return "Возможные координаты точек в четверти 2:(X < 0 ; Y > 0)";
+        case 3: return "Возможные координаты точек в четверти 3:(X < 0 ; Y < 0)";
+        case 4: return "Возможные координаты точек в четверти 4:(X > 0 ; Y < 0)";
+        default: return "Нет такой четверти. Повторите попытку.";
+        }
+}
+
+
+int quarter = Read_Quarter("Введите номер четверти где находится точка:");
+Console.WriteLine(Data_Ind (quarter));
+
