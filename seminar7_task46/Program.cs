@@ -30,7 +30,7 @@ void Print_2D_Array(int[,] matrix) //метод для печати двумер
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write(matrix[i,j]+" ");
+            Console.Write(matrix[i,j]+" \t");
         }
         Console.WriteLine();
     }
@@ -51,7 +51,7 @@ void Print_2D_Array_Color(int[,] matrix)
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             Console.ForegroundColor = colors[new System.Random().Next(0,16)];
-            Console.Write(matrix[i,j]+" ");
+            Console.Write(matrix[i,j]+" \t");
             Console.ResetColor();
         }
         Console.WriteLine();
