@@ -13,7 +13,7 @@ int[, ,] Generate_Random_Array(int sizeX, int sizeY, int sizeZ) //метод д�
             {
                 for (int z = 0; z < sizeZ; z++)
                 {
-                    array[x, y, z] = random.Next(1, 100);
+                    array[x, y, z] = random.Next(10, 100);
                 }
             }
         }
@@ -33,7 +33,7 @@ void Print_3D_Array(int[,,] array) //метод для печати трёхме
             {
                 for (int k = 0; k < dimension3Length; k++)
                 {
-                    Console.WriteLine($"[{i}, {j}, {k}] = {array[i, j, k]}");
+                    Console.WriteLine($"{array[i, j, k]}[{i}, {j}, {k}]");
                 }
             }
         }
