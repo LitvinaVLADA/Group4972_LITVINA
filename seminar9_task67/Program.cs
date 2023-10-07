@@ -7,7 +7,7 @@ int Read_Data (string start) //метод для получения числа
     return num;
 }
 
-int Digit_Sum(int num)
+int Digit_Sum(int num) //метод для суммирования цифр в числе
 {
     if(num > 0)
     {

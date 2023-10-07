@@ -8,7 +8,7 @@ int Read_Data (string start) //метод для получения числа
     return num;
 }
 
-long Exponentiation(int a,int b)
+long Exponentiation(int a,int b) //метод для возведения числа в заданную степень
 {
     if(b==2)return a*a;
     if(b==1)return a;

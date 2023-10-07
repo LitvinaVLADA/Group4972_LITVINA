@@ -7,7 +7,7 @@ int Read_Data (string start) //метод для получения числа
     return num;
 }
 
-string Search_Natural_Elements (int m, int n)
+string Search_Natural_Elements (int m, int n) //метод для вывода всех натруальных чисел в промежутке
 {
     return n >= m ? $"{m} " + Search_Natural_Elements(m + 1, n) : "";
 }
